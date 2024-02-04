@@ -37,3 +37,19 @@ HumanFriends.txt  Pets.txt
 - mv HumanFriends.txt /home/deskardo/PycharmProjects/pythonProject/animals/HumanFriends.txt
 - ls -la (проверить каталог)
 
+### Работа с MySQL в Linux
+1. Подключить дополнительный репозиторий и установить пакет
+   (у меня возникли проблемы с этим пунктом, поэтому я поставил не из дополнительного репозитория)
+- sudo apt update
+- sudo apt install mysql-server mysql-client
+- sudo mysql_secure_installation
+- systemctl status mysql
+- mysql
+
+### Управление deb-пакетами
+1. Уставновить и удалить deb-пакет использую команду dpkg
+- sudo dpkg -i vivaldi-stable_6.5.3206.59-1_amd64.deb
+- dpkg --get-selections (пришлось искать название установленного пакета)
+- sudo dpkg -r vivaldi-stable
+
+
