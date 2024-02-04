@@ -1,7 +1,7 @@
 # Калугин Алексей Викторович
 04.02.2024
 Группа: Разработчик | выходные | 4717
-
+### Использование команды cat в Linux
 1. создам директорию с помощью команды mkdir
 - mkdir /media/nursery
 - cd /media/nursery
@@ -30,3 +30,10 @@
 - ls -la
 - /media/nursery# ls
 HumanFriends.txt  Pets.txt
+
+### Работа с директориями
+1. Создать новую директорию переместить туда файл HumanFriends.txt
+- mkdir /home/deskardo/PycharmProjects/pythonProject/animals
+- mv HumanFriends.txt /home/deskardo/PycharmProjects/pythonProject/animals/HumanFriends.txt
+- ls -la (проверить каталог)
+
