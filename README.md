@@ -59,3 +59,12 @@ HumanFriends.txt  Pets.txt
 - Решение в файле UML.drawio
 
 
+### Работа с MySQL
+1. Создаем базу данных
+~~~
+CREATE DATABASE human_friends;
+~~~
+2. Создаем таблицы, соответствующие иерархии из диаграммы классов
+~~~
+
+~~~
