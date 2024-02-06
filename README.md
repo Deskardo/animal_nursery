@@ -162,6 +162,10 @@ CREATE TABLE donkey (
     Foreign KEY (type_id) REFERENCES pack_animals (id) ON DELETE CASCADE ON UPDATE CASCADE
 );
 
+~~~
+2. Заполняем значениями
+~~~
+
 INSERT INTO dogs (pet_name, type_id, birthday, commands)
 VALUES
 		('Max', 1, '2021-01-18', 'sit, down, stand'),
@@ -199,3 +203,15 @@ VALUES
         ('Dookey', 2, '2018-06-11', 'gait, walk, pull'),
         ('Jubilee', 2, '2017-02-10', 'gait, walk, pull');   
 ~~~
+3. Удалить таблицу с верблюдами, объединить ослов и лошадей
+
+~~~
+DELETE FROM camal WHERE type_id = 2;
+
+CREATE TABLE equidae
+SELECT * FROM horse
+		UNION 
+SELECT * FROM donkey;
+~~~
+
+
