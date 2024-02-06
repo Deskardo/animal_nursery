@@ -214,4 +214,92 @@ SELECT * FROM horse
 SELECT * FROM donkey;
 ~~~
 
+4.  - Создать новую таблицу для животных в возрасте от 1 до 3 лет и 
+вычислить их возраст с точностью до месяца.
+
+~~~
+CREATE TEMPORARY TABLE temp_animals AS
+SELECT * FROM dogs
+		UNION
+SELECT * FROM cats
+		UNION
+SELECT * FROM hamsters
+		UNION
+SELECT * FROM horse
+		UNION
+SELECT * FROM donkey;
+
+CREATE TABLE young_animals
+SELECT
+	pet_name, type_id, birthday, commands, TIMESTAMPDIFF(MONTH, birthday, CURDATE()) AS age_in_month
+FROM 
+	temp_animals
+WHERE birthday BETWEEN ADDDATE(CURDATE(), INTERVAL -3 YEAR) AND ADDDATE(CURDATE(), INTERVAL -1 YEAR);
+~~~
+5. Объединить все созданные таблицы в одну, 
+сохраняя информацию о принадлежности к исходным таблицам.
+
+~~~
+CREATE TABLE friends
+
+SELECT 
+	dg.pet_name,
+	p.type_of_pet as type_of_animal, 
+	dg.birthday, 
+	dg.commands,
+	a.subclass_name
+FROM dogs dg
+LEFT JOIN pets p ON p.id = dg.type_id
+LEFT JOIN animals a ON a.id = p.class_id
+UNION
+SELECT 
+	ct.pet_name,
+	p.type_of_pet as type_of_animal, 
+	ct.birthday, 
+	ct.commands,
+	a.subclass_name
+FROM cats ct
+LEFT JOIN pets p ON p.id = ct.type_id
+LEFT JOIN animals a ON a.id = p.class_id
+UNION
+SELECT 
+	hm.pet_name,
+	p.type_of_pet as type_of_animal, 
+	hm.birthday, 
+	hm.commands,
+	a.subclass_name
+FROM hamsters hm
+LEFT JOIN pets p ON p.id = hm.type_id
+LEFT JOIN animals a ON a.id = p.class_id
+UNION
+SELECT 
+	hr.pet_name,
+	pa.type_of_animal, 
+	hr.birthday, 
+	hr.commands,
+	a.subclass_name
+FROM horse hr
+LEFT JOIN pack_animals pa ON pa.id = hr.type_id
+LEFT JOIN animals a ON a.id = pa.class_id
+UNION
+SELECT 
+	dk.pet_name,
+	pa.type_of_animal, 
+	dk.birthday, 
+	dk.commands,
+	a.subclass_name
+FROM donkey dk
+LEFT JOIN pack_animals pa ON pa.id = dk.type_id
+LEFT JOIN animals a ON a.id = pa.class_id
+UNION
+SELECT 
+	cm.pet_name,
+	pa.type_of_animal, 
+	cm.birthday, 
+	cm.commands,
+	a.subclass_name
+FROM camal cm
+LEFT JOIN pack_animals pa ON pa.id = cm.type_id
+LEFT JOIN animals a ON a.id = pa.class_id
+~~~
 
