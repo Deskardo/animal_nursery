@@ -66,5 +66,99 @@ CREATE DATABASE human_friends;
 ~~~
 2. Создаем таблицы, соответствующие иерархии из диаграммы классов
 ~~~
+DROP DATABASE IF EXISTS human_friends;
+CREATE DATABASE human_friends;
 
+USE human_friends;
+
+CREATE TABLE animals
+(
+	id INT AUTO_INCREMENT PRIMARY KEY, 
+	subclass_name VARCHAR(20)
+);
+
+INSERT INTO animals (subclass_name)
+VALUES ('pets'), ('pack_animals');
+
+CREATE TABLE pets
+(
+	id INT AUTO_INCREMENT PRIMARY KEY, 
+    class_id INT,
+    type_of_pet VARCHAR(20),
+    FOREIGN KEY (class_id) REFERENCES animals (id) ON DELETE CASCADE ON UPDATE CASCADE
+);
+
+INSERT INTO pets (class_id, type_of_pet)
+	 VALUES
+			(1, 'dogs'),
+            (1, 'cats'),
+            (1, 'hamsters');
+
+CREATE TABLE pack_animals
+(
+	id INT AUTO_INCREMENT PRIMARY KEY, 
+    class_id INT,
+    type_of_animal VARCHAR(20),
+    FOREIGN KEY (class_id) REFERENCES animals (id) ON DELETE CASCADE ON UPDATE CASCADE
+);
+
+INSERT INTO pack_animals (class_id, type_of_animal)
+	 VALUES
+			(2, 'horse'),
+            (2, 'camal'),
+            (2, 'donkey');
+            
+CREATE TABLE dogs (
+	id INT AUTO_INCREMENT PRIMARY KEY, 
+    name VARCHAR(20), 
+    type_id INT, 
+    birthday DATE,
+    commands VARCHAR(50),
+    Foreign KEY (type_id) REFERENCES pets (id) ON DELETE CASCADE ON UPDATE CASCADE
+);
+
+CREATE TABLE cats (
+	id INT AUTO_INCREMENT PRIMARY KEY, 
+    name VARCHAR(20), 
+    type_id INT, 
+    birthday DATE,
+    commands VARCHAR(50),
+    Foreign KEY (type_id) REFERENCES pets (id) ON DELETE CASCADE ON UPDATE CASCADE
+);
+
+CREATE TABLE hamsters (
+	id INT AUTO_INCREMENT PRIMARY KEY, 
+    name VARCHAR(20), 
+    type_id INT, 
+    birthday DATE,
+    commands VARCHAR(50),
+    Foreign KEY (type_id) REFERENCES pets (id) ON DELETE CASCADE ON UPDATE CASCADE
+);
+
+CREATE TABLE horse (
+	id INT AUTO_INCREMENT PRIMARY KEY, 
+    name VARCHAR(20), 
+    type_id INT, 
+    birthday DATE,
+    commands VARCHAR(50),
+    Foreign KEY (type_id) REFERENCES pack_animals (id) ON DELETE CASCADE ON UPDATE CASCADE
+);
+
+CREATE TABLE camal (
+	id INT AUTO_INCREMENT PRIMARY KEY, 
+    name VARCHAR(20), 
+    type_id INT, 
+    birthday DATE,
+    commands VARCHAR(50),
+    Foreign KEY (type_id) REFERENCES pack_animals (id) ON DELETE CASCADE ON UPDATE CASCADE
+);
+
+CREATE TABLE donkey (
+	id INT AUTO_INCREMENT PRIMARY KEY, 
+    name VARCHAR(20), 
+    type_id INT, 
+    birthday DATE,
+    commands VARCHAR(50),
+    Foreign KEY (type_id) REFERENCES pack_animals (id) ON DELETE CASCADE ON UPDATE CASCADE
+);
 ~~~
