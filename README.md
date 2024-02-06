@@ -161,4 +161,41 @@ CREATE TABLE donkey (
     commands VARCHAR(50),
     Foreign KEY (type_id) REFERENCES pack_animals (id) ON DELETE CASCADE ON UPDATE CASCADE
 );
+
+INSERT INTO dogs (pet_name, type_id, birthday, commands)
+VALUES
+		('Max', 1, '2021-01-18', 'sit, down, stand'),
+        ('Rex', 1, '2022-02-01', 'bark, come, stay'),
+        ('Tiger', 1, '2019-10-10', 'hee, wait, take');
+
+INSERT INTO cats (pet_name, type_id, birthday, commands)
+VALUES
+		('Aron', 1, '2023-01-15', 'sleep, put, spin'),
+        ('Casper', 1, '2018-05-01', 'jump, belly, roll'),
+        ('Colin', 1, '2020-09-07', 'go back, roll, down');
+        
+INSERT INTO hamsters (pet_name, type_id, birthday, commands)
+VALUES
+		('Alvin', 1, '2022-02-13', 'roll, jump, spin'),
+        ('Chip', 1, '2023-04-07', 'roll, sleep, eat'),
+        ('Dail', 1, '2023-05-04', 'roll, sleep, eat');
+        
+--------------------------------------------------------------------------------------------
+
+INSERT INTO horse (pet_name, type_id, birthday, commands)
+VALUES
+		('Amori', 2, '2017-01-15', 'gait, walk, gallop'),
+        ('Darkangel', 2, '2020-05-05', 'pace, walk, canter'),
+        ('Amber', 2, '2018-03-12', 'jump, pull, halt');
+        
+INSERT INTO camal (pet_name, type_id, birthday, commands)
+VALUES
+		('Lila', 2, '2016-08-13', 'gait, walk, gallop'),
+        ('Blum', 2, '2018-11-08', 'gait, walk, gallop');
+
+INSERT INTO donkey (pet_name, type_id, birthday, commands)
+VALUES
+		('Wookey', 2, '2014-10-12', 'gait, walk, pull'),
+        ('Dookey', 2, '2018-06-11', 'gait, walk, pull'),
+        ('Jubilee', 2, '2017-02-10', 'gait, walk, pull');   
 ~~~
