@@ -7,6 +7,11 @@ class PackAnimal(Animal):
 
 
 class Horse(PackAnimal):
+    def __init__(self, name, birth_date):
+        super().__init__(name, birth_date)
+        self.type_of_animal = "horse"
+        self.pet_commands = []
+
     def sound(self):
         return "Neigh!"
 
@@ -15,6 +20,11 @@ class Horse(PackAnimal):
 
 
 class Camel(PackAnimal):
+    def __init__(self, name, birth_date):
+        super().__init__(name, birth_date)
+        self.type_of_animal = "camel"
+        self.pet_commands = []
+
     def sound(self):
         return "Grunt!"
 
@@ -23,6 +33,11 @@ class Camel(PackAnimal):
 
 
 class Donkey(PackAnimal):
+    def __init__(self, name, birth_date):
+        super().__init__(name, birth_date)
+        self.type_of_animal = "donkey"
+        self.pet_commands = []
+
     def sound(self):
         return "Hee-haw!"
 

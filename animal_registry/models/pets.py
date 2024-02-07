@@ -7,6 +7,11 @@ class Pet(Animal):
 
 
 class Dog(Pet):
+    def __init__(self, name, birth_date):
+        super().__init__(name, birth_date)
+        self.type_of_animal = "dog"
+        self.pet_commands = []
+
     def sound(self):
         return "Woof!"
 
@@ -15,6 +20,11 @@ class Dog(Pet):
 
 
 class Cat(Pet):
+    def __init__(self, name, birth_date):
+        super().__init__(name, birth_date)
+        self.type_of_animal = "cat"
+        self.pet_commands = []
+
     def sound(self):
         return "Meow!"
 
@@ -23,6 +33,11 @@ class Cat(Pet):
 
 
 class Hamster(Pet):
+    def __init__(self, name, birth_date):
+        super().__init__(name, birth_date)
+        self.type_of_animal = "hamster"
+        self.pet_commands = []
+
     def sound(self):
         return "Squeak!"
 
