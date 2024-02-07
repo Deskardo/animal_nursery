@@ -303,3 +303,5 @@ LEFT JOIN pack_animals pa ON pa.id = cm.type_id
 LEFT JOIN animals a ON a.id = pa.class_id
 ~~~
 
+## Объектно-ориентированное программирование написание ПО
+### Программа-реестр домашних животных
