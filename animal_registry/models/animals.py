@@ -1,5 +1,6 @@
 class Animal:
     count = 0
+    list_animals = []
 
     def __init__(self, name, birth_date):
         self.name = name
