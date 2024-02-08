@@ -5,15 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7f87217e-8857-48b4-b2bb-9104322e791c" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/animal_registry/presenters/add_animal_base_methods.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/animal_registry/presenters/methods.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/animal_registry/presenters/test_function.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main2.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/animal_registry/models/animals.py" beforeDir="false" afterPath="$PROJECT_DIR$/animal_registry/models/animals.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/animal_registry/models/pack_animal.py" beforeDir="false" afterPath="$PROJECT_DIR$/animal_registry/models/pack_animal.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/animal_registry/models/pets.py" beforeDir="false" afterPath="$PROJECT_DIR$/animal_registry/models/pets.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/animal_registry/presenters/menu_presenter.py" beforeDir="false" afterPath="$PROJECT_DIR$/animal_registry/presenters/menu_presenter.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/animal_registry/presenters/add_animal_base_methods.py" beforeDir="false" afterPath="$PROJECT_DIR$/animal_registry/presenters/add_animal_base_methods.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/animal_registry/presenters/methods.py" beforeDir="false" afterPath="$PROJECT_DIR$/animal_registry/presenters/methods.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/animal_registry/presenters/test_function.py" beforeDir="false" afterPath="$PROJECT_DIR$/animal_registry/presenters/test_function.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -125,7 +120,8 @@
       <workItem from="1707192931036" duration="21000" />
       <workItem from="1707192992468" duration="602000" />
       <workItem from="1707237938857" duration="4715000" />
-      <workItem from="1707304436502" duration="23343000" />
+      <workItem from="1707304436502" duration="23472000" />
+      <workItem from="1707411014994" duration="722000" />
     </task>
     <servers />
   </component>

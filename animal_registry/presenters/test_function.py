@@ -24,10 +24,7 @@ def is_pets(animal_type: str) -> bool:
     return animal_type in ['dog', 'cat', 'hamster']
 
 
-def is_name_in_registry(animal_type, name: str, registry: list) -> bool:
-    name_type_filter = lambda x: x.type_of_pet == animal_type and x.name == name
-    if not registry:
+def is_correct_command(command: str) -> bool:
+    if not command:
         return False
-    elif len(list(filter(name_type_filter, registry))):
-        return True
-    return False
+    return all([command.isalpha(), len(command) > 2, all([c in string.ascii_letters for c in command])])

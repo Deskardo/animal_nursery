@@ -22,3 +22,10 @@ def set_type():
     while animal_type not in ("dog", "cat", "hamster", "horse", "camel", "donkey"):
         animal_type = input("Enter the type of animal (dog, cat, hamster, horse, camel, donkey): ")
     return animal_type
+
+
+def set_command():
+    command = input("Enter the command you want to teach the animal: ").lower()
+    while not t.is_correct_command(command):
+        command = input("Your input is incorrect enter the correct command: ").lower()
+    return command
